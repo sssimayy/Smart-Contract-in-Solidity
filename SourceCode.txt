@@ -1,0 +1,28 @@
+pragma solidity ^0.5.1;
+
+contract MyContract {
+   address public myAddress=address(this);
+   function () external payable{
+       
+   }
+   function fun() public{
+       
+       CommonCounterContract cntr= CommonCounterContract(0x2B980738c5Cd15C015CeCC6F830600fbDf9d1F25);
+       int256 counter= cntr.getCounter.value(0.1 ether)();
+       cntr.incrementCounter.value(0.5 ether)(counter);
+   }
+    
+}
+contract CommonCounterContract{
+    
+    
+    function setTeamContract(address) public ;
+    function getMyTeamContract() public view returns (address);
+    function getCounter() public payable returns (int256);
+    function incrementCounter(int256) public payable;
+    function getMyTeamCount() public view returns (int256);
+    
+    
+}
+
+Address=0xB1Be21c636230b0F2d0B884727111b987F47f6fa
