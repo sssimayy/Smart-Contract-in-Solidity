@@ -7,7 +7,7 @@ contract MyContract {
    }
    function fun() public{
        
-       CommonCounterContract cntr= CommonCounterContract(0x2B980738c5Cd15C015CeCC6F830600fbDf9d1F25);
+       CommonCounterContract cntr= CommonCounterContract(XXXXXXXXXXXXXXXXXXXXXXXXXX);
        int256 counter= cntr.getCounter.value(0.1 ether)();
        cntr.incrementCounter.value(0.5 ether)(counter);
    }
@@ -24,5 +24,3 @@ contract CommonCounterContract{
     
     
 }
-
-Address=0xB1Be21c636230b0F2d0B884727111b987F47f6fa
